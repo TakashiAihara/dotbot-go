@@ -27,9 +27,9 @@ detailed (dict with flags passed to `go install` command). Example:
 
 ```yaml
 - go:
-  - github.com/delicb/cliware
+  - github.com/delicb/cliware@latest
   - package:
-    - github.com/delicb/cliware-middlewares
+    - github.com/delicb/cliware-middlewares@latest
     flags: [-v, -u]
     stdout: true
     stderr: true
