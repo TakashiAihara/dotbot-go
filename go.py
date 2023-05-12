@@ -21,7 +21,7 @@ def which(program):
 
 class Go(dotbot.Plugin):
     """
-    Installs GoLang tools by using 'go get' command
+    Installs GoLang tools by using 'go install' command
     """
 
     _directive = 'go'
@@ -66,7 +66,7 @@ class Go(dotbot.Plugin):
 
             flags = data.get('flags', [])
 
-            cmd = [self._go_exec, 'get'] + flags + [package]
+            cmd = [self._go_exec, 'install'] + flags + [package]
             self._log.warning('Running command: %s' % ' '.join(cmd))
             ret = subprocess.call(
                 cmd,
